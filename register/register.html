@@ -1,0 +1,61 @@
+
+  <br/><br/><br/>
+		<div>
+            <h1>Welcome to The PlugBlog</h1>
+		</div>
+      <div class="container">
+            <div class="red flame"></div>
+            <div class="orange flame"></div>
+            <div class="yellow flame"></div>
+            </div>
+          <div class= "topbanner">
+
+            <img src="logos/logoreal.jpg" alt="The Plug Logo" style="width:304px;height:228px;">
+            </div>
+            <div class="formRegister">
+
+                <h1>Register an Account</h1>
+
+                
+              <p class= "already">Already Registered?</br>
+              <a href="#!/" class="signIn">Sign In</a></p>
+
+                      <form ng-submit="regUser()" name="regForm">
+
+                      <div class="top-row">
+                        <div class="field-wrap">
+                          <label>
+                            <span class="req" ></span>
+                          </label>
+                          <input type="text" name="firstname" ng-model="firstname" class="form-control" required autocomplete="off" placeholder="First Name" />
+                        </div>
+                    
+                        <div class="field-wrap" ng-class="{'has-error': regform.lastname.$invalid && regform.lastname.$touched}">
+                          <label>
+                            <span class="req"></span>
+                          </label>
+                          <input type="text" name="lastname" ng-model="lastname" class="form-control" required autocomplete="off" placeholder="Last Name"/>
+                        </div>
+                      </div>
+
+                      <div class="field-wrap" ng-class="{'has-error': regform.email.$invalid && regform.email.$touched}">
+                        <label>
+                          <span class="req"></span>
+                        </label>
+                        <input type="email" name="email" ng-model="email" class="form-control" id = "inputEmail"  required autocomplete="off" placeholder="Email Address"/>
+                      </div>
+                      
+                      <div class="field-wrap" ng-class="{'has-error': regform.password.$invalid && regform.password.$touched}">
+                        <label>
+                          <span class="req"></span>
+                        </label>
+                        <input type="password" name="password" ng-model="password" class="form-control" id= "inputPassword" required autocomplete="off" placeholder="Enter a Password"/>
+                      </div>
+
+                    <p> Click to go to Sign In page</p>
+                      <button  type="submit" id="register()" class="button button-block" >Complete Registration</button>
+
+                      </form>
+
+      </div>
+ 

@@ -1,11 +1,4 @@
-
 {
-  "database": {
-    "rules": "database.rules.json"
-  },
-  "hosting": {
-    "public": "public",
-    "rewrites": [
-    ]
-  }
+  "firebase": "slack",
+  "public": "dist"
 }

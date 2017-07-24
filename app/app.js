@@ -17,20 +17,23 @@ angular
         url: '/landingPage',
         templateUrl: 'home/landingPage.html'
       })
-
+      .state('addPost', {
+        url: '/addPost',
+        templateUrl: 'addPost/addPost.html'
+      })
     
       .state('login', {
         url: '/login',
         controller: 'AuthCtrl as authCtrl',
         templateUrl: 'auth/login.html',
-        resolve: {
+      /*  resolve: {
             requireNoAuth: function($state, Auth){
                 return Auth.$requireSignIn().then(function(auth){$state.go('landingPage');
                 }, function(error){
                     return;
                 })
             }
-        }
+        }*/
       })
       .state('register', {
         url: '/register',

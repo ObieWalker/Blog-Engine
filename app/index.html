@@ -5,6 +5,13 @@
     <title>PLBL</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
     
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
       <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -40,14 +47,24 @@
      </div>
      <ul class="nav navbar-nav">
        <li class="active"><a href="#/">Home</a></li>
-       <li><a ng-href="#!/login">Login</a></li>
-       <li><a ng-href="#!/register">register</a></li>
+       <li><a href="#!/login">Login</a></li>
+       <li><a href="#!/register">register</a></li>
+	   <li><a href="#!/addPost">Add a Blog Post</a></li>
+	   <li><a href="#!/landingPage">All Blogs</a></li>
      </ul>
    </div>
  </nav>
-      
-      
-      
+     <div align="center"> 
+      <p>....There once was a woman called mary jane who was considered criminal.<br/> 
+	  Just by being with her you were committing a crime, but she was irresistable. <br/>
+	  She was such an attraction that both men and women messed with her.<br/>
+	  She made you feel good and could put your ass to sleep.<br/>
+	  A kiss from her was rumoured to give black lips and turn eyes red. <br/>
+	  They said she's high grade, she loud. <br/>
+	  The strongest argument for her legality was very simple,<br/>
+	  "How can a government outlaw a person God created"<br/><br/>
+</p>
+     <div> 
     <ui-view></ui-view>
 
 
@@ -71,8 +88,6 @@
     <script src="bower_components/angularfire/dist/angularfire.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-md5/angular-md5.js"></script>
-  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-3.5.0.min.js"></script>
-
     <!-- endbower -->
     <!-- endbuild -->
 

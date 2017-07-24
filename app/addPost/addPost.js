@@ -16,7 +16,7 @@ angular.module('myApp.addPost', ['ngRoute'])
 		var date = $scope.article.date;
 		var user = CommonProp.getUser();
 	
-			var firebaseObj = new Firebase("https://blogz-on-fire.firebaseio.com");
+			var firebaseObj = new Firebase("https://blog-engine-d1336.firebaseio.com");
     	var fb = $firebase(firebaseObj);
 
 			fb.$push({

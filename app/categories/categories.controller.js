@@ -9,7 +9,7 @@ angular.module('angularfireSlackApp')
 	categoriesCtrl.newCategory = {
 	  name: ''
 	};
-	categoriesCtrl.createCategories = function(){
+	categoriesCtrl.createCategory = function(){
 	  categoriesCtrl.categories.$add(categoriesCtrl.newCategory).then(function(ref){
 		$state.go('categories.posts', {categoryId: ref.key});
 	  });

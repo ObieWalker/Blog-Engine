@@ -2,8 +2,8 @@
  </header>
  <nav class="navbar navbar-inverse navbar-static-top">
    <div class="container-fluid">
-	 <div class="navbar-header">
-
+	 <div class="navbar-header" style="margin-left: 50px;">
+	 <div class="active"><a href="#/">Home</a></div>
 	  <div style="color:red; font-size:20px; display: inline-block" >Categories</div>
 	   <div class="channel-list">
 		  <div class="channel" ng-repeat="category in categoriesCtrl.categories">
@@ -33,3 +33,8 @@
 		You will then type in your Title,Blog Post,Send, and VOILA
       </div>
     </div>
+
+	<div class="message-pane">
+		<ui-view></ui-view>
+		</div>
+	

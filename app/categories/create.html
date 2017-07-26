@@ -1,10 +1,12 @@
-<div class="header">
-  <h1>Create a Category</h1>
-</div>
 
-<form ng-submit="categoriesCtrl.createCategory()">
-  <div class="input-group">
-    <input type="text" class="form-control" placeholder="Category Name" ng-model="categoriesCtrl.newCategory.name">
-  </div>
-  <input type="submit" class="btn btn-default" value="Create Category">
-</form>
+	<div class="header">
+	  <h1>Create a Category or Tag Name to describe the Post.</h1>
+	</div>
+<div style="margin-left:530px">
+	<form ng-submit="categoriesCtrl.createCategory()">
+	  <div class="input-group" >
+		<input type="text" class="form-control" placeholder="Category Name" ng-model="categoriesCtrl.newCategory.name">
+	  </div><br/>
+	  <input style="margin-left:23px" type="submit" class="btn btn-default" value="Create Category">
+	</form>
+</div>

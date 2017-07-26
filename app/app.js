@@ -92,14 +92,14 @@ angular
 		  url: '/{categoryId}/posts',
 		  templateUrl: 'categories/posts.html',
 		  controller: 'PostsCtrl as postsCtrl',
-		  resolve: {
+		  /*resolve: {
 			posts: function($stateParams, Posts){
 			  return Posts.forCategory($stateParams.categoryId).$loaded();
 			},
 			categoryName: function($stateParams, categories){
 			  return '#'+categories.$getRecord($stateParams.categoryId).name;
 			}
-		  }
+		  }*/
 		})
       .state('register', {
         url: '/register',

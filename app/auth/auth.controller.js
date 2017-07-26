@@ -7,7 +7,7 @@ angular.module('angularfireSlackApp')
     }
     
     authCtrl.login = function(){
- Auth.$signInWithEmailAndPassword(authCtrl.user.email, authCtrl.user.password).then(function (auth){ 
+	Auth.$signInWithEmailAndPassword(authCtrl.user.email, authCtrl.user.password).then(function (auth){ 
           $state.go('home'); 
         }, function (error){
             authCtrl.error = error;
@@ -23,4 +23,9 @@ angular.module('angularfireSlackApp')
     
     };
     
+	authCtrl.logout = function(){
+		Auth.$signOut().then(function(){
+			$state.go('home');
+		});
+	};
 });

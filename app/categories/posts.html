@@ -1,0 +1,41 @@
+ 				<header ng-include="sub/nav.html">
+				 </header>
+				 <nav class="navbar navbar-inverse navbar-static-top">
+				   <div class="container-fluid">
+					 <div class="navbar-header">
+					   
+					 </div>
+
+					  <div class="text-right">
+						<a href="#" ng-click="authCtrl.logout()" class="btn btn-lg btn-danger">Log Out</a>
+						
+					  </div><br/>
+					  
+					</div>
+				   
+				 </nav>
+				 
+ 
+ <legend><h1> Write a Blog Post for the PLBL baby</h1></legend>
+
+<form class="message-form" ng-submit="postsCtrl.sendPost()">
+ 
+       <div class="form-group">
+        <label class="col-md-4 control-label" for="txtTitle">Title</label>
+        <div class="col-md-4">
+          <input id="txtTitle" name="txtTitle" ng-model="postsCtrl.title" type="text" placeholder="Post Title" class="form-control input-md">
+        </div>
+      <br/><br/><br/>
+ 
+       
+        <label class="col-md-4 control-label" for="txtPost">Post</label>
+        <div class="col-md-4">
+          <textarea class="form-control" id="txtPost" ng-model="postsCtrl.post" name="txtPost" placeholder="Enter Blog post here"></textarea>
+        </div>
+		<button class="btn btn-default" type="submit">Add Blog Post</button>
+      </div>
+ 
+ 
+
+</form>
+

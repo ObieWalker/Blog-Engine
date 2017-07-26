@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.addPost', ['ngRoute'])
+angular.module('angularfireSlackApp.addPost', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/addPost', {
@@ -10,14 +10,15 @@ angular.module('myApp.addPost', ['ngRoute'])
 }])
 
 .controller('addPostController', ['$scope','$firebase', 'CommonProp', '$location', function($scope, $firebase, CommonProp, $location) {
+	$scope.today = new Date();
     $scope.addPost = function(){
 		var title = $scope.article.title;
   		var post = $scope.article.post;
-		var date = $scope.article.date;
+		
 		var user = CommonProp.getUser();
 	
 			var firebaseObj = new Firebase("https://blog-engine-d1336.firebaseio.com");
-    	var fb = $firebase(firebaseObj);
+			var fb = $firebase(firebaseObj);
 
 			fb.$push({
 				title: title,

@@ -109,7 +109,7 @@ label.active {
 label.highlight {
 	color:#ffffff;
 }
-
+/*
 input, textarea {
   font-size:22px;
   display:block;
@@ -123,16 +123,20 @@ input, textarea {
   border-radius:0;
   transition:border-color .25s ease, box-shadow .25s ease;
  
-}
+}*/
 
 textarea {
   border:2px solid #a0b3b0;
+  height: 700px;
   resize: vertical;
 }
 
 .field-wrap {
   position:relative;
   margin-bottom:40px;
+}
+#txtPost{
+	font-color:black;
 }
 
 .top-row {
@@ -162,7 +166,7 @@ textarea {
   cursor: pointer;
 }
   .button:hover, :focus {
-    background:darkgreen;
+    background:white;
     transition:0.5s;
   }
   .button:active{
@@ -170,7 +174,10 @@ textarea {
 	transform: translateY(10px);
 	
 }
-
+legend{
+	text-align: center;
+	font-size: 30px;
+}
 .button-block {
   display:block;
   width:60%;

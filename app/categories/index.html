@@ -1,0 +1,35 @@
+<header ng-include="sub/nav.html">
+ </header>
+ <nav class="navbar navbar-inverse navbar-static-top">
+   <div class="container-fluid">
+	 <div class="navbar-header">
+
+	  <div style="color:red; font-size:20px; display: inline-block" >Categories</div>
+	   <div class="channel-list">
+		  <div class="channel" ng-repeat="category in categoriesCtrl.categories">
+			<a ui-sref="categories.posts({categoryId: category.$id})" ui-sref-active="selected"># {{ category.name }}</a>
+			
+		  </div>
+		    <div class="channel create">
+			<a ui-sref="categories.create">+ Add a new Category</a>
+		  </div>
+		</div>
+	   <div style="text-right">
+		  <a ui-sref="profile">edit profile</a>
+		
+		</div>
+		</div>
+	</div>
+	</nav>
+
+    <div class="my-info">
+     
+      <div class="user-info">
+        <div class="user-name" style="font-weight:bold; font-size: 30px; margin-left: 50px;">
+         <span>Hey {{ categoriesCtrl.profile.displayName }} , plug away.....</span>
+        </div>
+		<p style="margin-left:50px; font-style:cursive;"> I will be your helper today. <br/>
+		Start by creating a Tag for your Post<br/>
+		You will then type in your Title,Blog Post,Send, and VOILA
+      </div>
+    </div>

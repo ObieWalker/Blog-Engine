@@ -1,26 +1,63 @@
+				<header ng-include="sub/nav.html">
+				 </header>
+				 <nav class="navbar navbar-inverse navbar-static-top">
+				   <div class="container-fluid">
+					 <div class="navbar-header">
+					   <a class="navbar-brand" href="#/">PLBL</a>
+					 </div>
+					 <ul class="nav navbar-nav">
+					   <li class="active"><a href="#/">Home</a></li>
+					   <li><a href="#!/addPost">Add a Blog Post</a></li>
+					   <li><a href="#!/landingPage">All Blogs</a></li>
+					 </ul>
+					  <div class="text-right">
+						<a ui-sref="login" class="btn btn-lg btn-success">Login</a>
+						<a ui-sref="register" class="btn btn-lg btn-primary">Register</a>
+						
+					  </div><br/>
+					  
+					</div>
+				   
+				 </nav>
+
 <br/><br/><br/><div>
  <h1>Welcome to The PlugBlog</h1>
 </div>
 
-          <div class= "topbanner">
-
-            <img src="logos/logoreal.jpg" alt="The Plug Logo" style="width:304px;height:228px;">
-            </div>
 			 <div class="container">
             <div class="red flame"></div>
             <div class="orange flame"></div>
             <div class="yellow flame"></div>
             </div>
-			
-			
-			
-            <div class="formRegister">
+			 <div class= "topbanner">
 
-                
+            <img src="logos/logoreal.jpg" alt="The Plug Logo" style="width:304px;height:228px;">
+            </div>
+			
+			
+		<div class="header">
+		  <h1>{{ postsCtrl.categoryName }}</h1>
+		</div>
 
-  <p class="text-center">
-    <a ui-sref="login" class="btn btn-lg btn-default">Login</a> or <a ui-sref="register" class="btn btn-lg btn-primary">Register</a>
-  </p>
+		<div class="message-wrap" ng-repeat="post in postsCtrl.posts">
+		  
+		  <div class="message-info">
+			<div class="user-name">
+			  {{ postsCtrl.getDisplayName(post.uid) }}
+			  <span class="timestamp">{{ post.timestamp | date:'short' }}</span>
+			</div>
+			
+			
+			<div class="message" style="font-size:30px; font-weight:bold;">
+			 {{ post.head }}
+			</div>
+			 <br/><br/>
+
+			<div class="message" style="font:cursive">
+			 {{ post.body }}
+			</div>
+		  </div>
+		</div>
 
      <div align="center"> 
       <p>....There once was a woman called mary jane who was considered criminal.<br/> 
@@ -32,5 +69,5 @@
 	  The strongest argument for her legality was very simple,<br/>
 	  "How can a government outlaw a person God created"<br/><br/>
 	</p>
-     <div> 
+     
 </div>

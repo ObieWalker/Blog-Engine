@@ -1,5 +1,5 @@
 angular.module('angularfireSlackApp')
-    .factory('Auth', function($firebaseAuth,){
+    .factory('Auth', function($firebaseAuth){
      var auth = $firebaseAuth();
     
     return auth;
